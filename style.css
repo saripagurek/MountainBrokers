@@ -1,11 +1,13 @@
 body {
 	padding:0;
-	margin:0;
+	margin:151px;
 	background-color:#a1b9e0;
     background-image: url("mountains-hero.jpg");
     background-attachment: fixed;
     background-size:cover;
-	font-family: 'Courier', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+
 }
 
 h3 {
@@ -14,11 +16,13 @@ h3 {
     font-size: 45px;
     color: white;
     margin:0;
+		font-family: 'Courier', sans-serif;
+
+
 
 }
 
 h2 {
-    font-family: 'Open-Sans', sans-serif;
     font-weight: lighter;
 
 
@@ -27,91 +31,90 @@ h2 {
 
 h1 {
 	font-weight: lighter;
-	font-size: 90px;
+	font-size: 150px;
 	color: #FFF;
 
 	margin:0;
-	line-height:150px;
+	line-height:160px;
 	display: inline-block;
 	vertical-align:middle;
+	font-family: 'Courier', sans-serif;
 }
 
-#header {
-	margin-top:20px;
-  margin-left: 80px;
+
+@media all and (max-width: 1700px) {
+	h1 {
+		font-size: 60px;
+	}
+	body{
+		margin: 20px;
+	}
+	h3 {
+		font-size: 35px;
+	}
+	h2 {
+		font-size: 15px;
+	}
+	img {
+		width: 55px;
+	}
 }
 
-#previews {
-	border-bottom: 1px solid #FFF;
-	padding-bottom:20px;
+.content {
+ 	background-color:#FFF;
+ 	border-radius: 10px;
+	padding: 20px;
 	margin-bottom: 20px;
-	text-align:center;
-	display:flex;
-	flex-direction:row;
+
+
+}
+
+a.page {
+	display:inline-block;
+	padding: 15px;
+	background-color: #FFF;
+	border-radius: 10px;
+	color: #000;
+
+
+}
+
+.quote {
+	background-color:#FFF;
+	border-radius: 10px;
+	padding: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-bottom: 20px;
+quotes: "\201C""\201D""\2018""\2019";
+position: relative;
+
+}
+
+.quote::before {
+		content:open-quote;
+		font-size: 80px;
+		position:absolute;
+		top:0;
+		left:80px;
+
 	}
 
-  .post {
-  	background-color:#FFF;
-  	border-radius:15px;
-  	padding:30px;
-  	margin-bottom: 30px;
-    margin-top: 30px;
+.quote::after {
+	content:close-quote;
+	font-size: 80px;
+	position:absolute;
+	bottom:0;
+	right:80px;
+	line-height: 10px;
 
-  }
+}
 
-  .preview {
-  	display:inline-block;
-  	width:264px;
-  	height:auto;
-  	margin-right: 30px;
-    margin-left: 30px;
-    color: #FFF;
-      vertical-align:top;
-  	}
+.pages{
+	margin-bottom: 20px;
+	margin-top: 5px;
 
-		.preview.spaced {
-			margin-bottom: 20px;
 
-	}
 
-	.preview .collection {
-	width: 180px;
-	height:75px;
-	border-radius:15px;
-	text-align:center;
-	background-color:rgba(242, 176, 176, 0.56);
-		background-size:cover;
-		background-position:center;
-	color: #0000;
-	font-size: 20px;
-	text-shadow: 0 0 10px black, 0 0 10px black;
 
-	border: 2px solid rgba(255, 255, 255, 0);
-	transition: all linear 0.2s;
-
-	text-decoration:none;
-	display:flex;
-	justify-content:center;
-	align-items: center;
-	}
-
-    .preview .circle {
-    	width: 220px;
-    	height:180px;
-    	border-radius:15px;
-    	text-align:center;
-    	background-color:rgba(242, 176, 176, 0.56);
-        background-size:cover;
-        background-position:center;
-    	color: #FFF;
-    	font-size: 20px;
-    	text-shadow: 0 0 10px black, 0 0 10px black;
-
-    	border: 2px solid rgba(255, 255, 255, 0);
-    	transition: all linear 0.2s;
-
-    	text-decoration:none;
-    	display:flex;
-    	justify-content:center;
-    	align-items: center;
-    }
+}
