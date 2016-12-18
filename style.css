@@ -17,8 +17,10 @@ h3 {
     color: white;
     margin:0;
 		font-family: 'Courier', sans-serif;
+}
 
-
+h4 {
+		font-weight: bold;
 
 }
 
