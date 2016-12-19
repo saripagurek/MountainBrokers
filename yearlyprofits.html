@@ -20,7 +20,7 @@
 
 
   <div class="content">
-
+    <h4>Monthly Stock Values</h4>
     <canvas id="mgraph"></canvas>
     <h2> This graph shows our stocks in 2015, that our team of experienced brokers
       invested in for our clients. We know what stocks to buy, and when to buy them for optimal
@@ -29,6 +29,7 @@
   </div>
 
   <div class="content">
+    <h4>Yearly Stock Values</h4>
     <canvas id="ygraph"></canvas>
     <h2> This graph shows our stock values over the years, from 2003 to 2015.
       The stocks that our team has invested in for our clients, have ranged from 5
@@ -71,6 +72,24 @@ var mgraph = new Chart(ctx, {
      callbacks: {
        label: function(item){ return "Stock Values have increased by: " + item.yLabel + "%"; }
      }
+   },
+   scales:{
+     yAxes:[
+       {
+         scaleLabel:{
+           display:true,
+           labelString: 'Stock Value increases in %'
+         }
+       }
+     ],
+     xAxes:[
+       {
+         scaleLabel:{
+           display:true,
+           labelString: 'Months'
+         }
+       }
+     ]
    }
  }
 });
@@ -97,6 +116,24 @@ var ygraph = new Chart(ctx, {
      callbacks: {
        label: function(item){ return "Stock Values have increased by: " + item.yLabel + "%"; }
      }
+   },
+   scales:{
+     yAxes:[
+       {
+         scaleLabel:{
+           display:true,
+           labelString: 'Stock Value increases in %'
+         }
+       }
+     ],
+     xAxes:[
+       {
+         scaleLabel:{
+           display:true,
+           labelString: 'Years'
+         }
+       }
+     ],
    }
  }
 });
